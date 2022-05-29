@@ -1,2 +1,2 @@
 # lecture
-lecture Study
+강의 공부
