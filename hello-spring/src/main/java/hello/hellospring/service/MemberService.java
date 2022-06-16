@@ -21,6 +21,7 @@ public class MemberService {
 		return member.getId();
 	}
 	
+	// 중복 회원 검증 메소드
 	private void validateDuplicateMember(Member member) {
 		
 		// null 일 가능성이 있으면 옵셔널로 감쌈
@@ -43,7 +44,7 @@ public class MemberService {
 		return memberRepository.findAll();
 	}
 	
-	public Optional<Member> findOne(Long memberId) {
+	public Optional<Member> findOne(Long memberId) { // null일 가능성 있으면 옵셔널
 		return memberRepository.findById(memberId);
 	}
 }
