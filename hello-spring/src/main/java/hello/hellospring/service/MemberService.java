@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 //@Service
+@Transactional // JPA를 사용할때는 항상 트랜잭션 안에서 데이터를 변경해야함.
 public class MemberService {
 	
 	private final MemberRepository memberRepository;
