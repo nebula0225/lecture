@@ -8,6 +8,8 @@ public class Member {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	// findByName의 경우, 아래와 같은 JPQL이 실행됨.
+	// JPQL select m from Member m where m.name = ?
 	@Column(name = "name")
 	private String name;
 	
