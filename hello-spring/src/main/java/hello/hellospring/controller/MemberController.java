@@ -18,6 +18,7 @@ public class MemberController {
 	// 단일 생성자인 경우에는 어노테이션 안붙여도 됨.
 	public MemberController(MemberService memberService) {
 		this.memberService = memberService;
+		System.out.println("memberService = " + memberService.getClass()); // aop 적용시 proxy가 들어옴
 	}
 	
 	@GetMapping("/members/new")
